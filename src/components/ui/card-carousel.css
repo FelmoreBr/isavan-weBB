@@ -1,0 +1,121 @@
+/**
+ * Estilos para el componente CardCarousel
+ * Basado en la documentación de skiper-ui
+ */
+
+/* Contenedor principal del carrusel */
+.card-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: visible;
+    isolation: isolate; /* Crear un contexto de apilamiento aislado */
+    contain: layout style; /* Contener el layout para evitar interferencias */
+}
+
+/* Contenedor de slides */
+.card-carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para cada slide */
+.card-carousel-slide {
+    position: absolute;
+    width: 250px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: visible;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 0 60px;
+}
+
+/* Estilos para las imágenes dentro de los slides */
+.card-carousel-slide img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    max-width: 250px;
+    max-height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones de navegación */
+.card-carousel-prev,
+.card-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-carousel-prev:hover,
+.card-carousel-next:hover {
+    background: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-carousel-prev {
+    left: 10px;
+}
+
+.card-carousel-next {
+    right: 10px;
+}
+
+/* Nombre de la comuna */
+.card-carousel-caption {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7cb342;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Paginación */
+.card-carousel-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Puntos de paginación */
+.card-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(200, 200, 200, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-carousel-dot.active {
+    background: #7cb342;
+    transform: scale(1.2);
+}

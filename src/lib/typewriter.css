@@ -1,0 +1,65 @@
+/* Typewriter cursor animation */
+@keyframes cursor {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
+}
+
+.animate-cursor {
+  animation: cursor 1s infinite;
+}
+
+/* Typewriter container styles */
+.typewriter-container {
+  position: relative;
+  width: 100%;
+  max-width: 4xl;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.typewriter-content {
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter-text {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-family: monospace;
+  color: #000;
+  letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .typewriter-text {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.dark .typewriter-text {
+  color: #fff;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  border-right: 2px solid;
+  border-color: #000;
+  padding-right: 0.25rem;
+}
+
+.dark .typewriter-cursor {
+  border-color: #fff;
+}
