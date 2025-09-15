@@ -89,14 +89,15 @@ const ConciertosSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-900 text-white relative overflow-hidden">
-      {/* Imagen de fondo del aeropuerto */}
+    <section className="min-h-screen py-16 bg-gray-900 text-white relative overflow-hidden">
+      {/* Imagen de fondo del concierto */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/Concierto.png"
           alt="Concierto background"
           fill
-          className="object-cover opacity-100"
+          className="object-cover opacity-100 w-full h-full"
+          sizes="100vw"
         />
       </div>
       

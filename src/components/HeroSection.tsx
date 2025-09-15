@@ -9,7 +9,7 @@ import CotizadorAeropuerto from './CotizadorAeropuerto';
 const HeroSection = () => {
   const [comunaSeleccionada, setComunaSeleccionada] = useState<string>('');
   return (
-    <section className="relative min-h-screen flex flex-col">
+    <section className="relative h-screen flex flex-col">
       {/* NavBar */}
       <NavBar />
       
@@ -21,8 +21,9 @@ const HeroSection = () => {
             src="/images/bg-airport.jpg"
             alt="Aeropuerto background"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center w-full h-full"
             priority
+            sizes="100vw"
           />
         </div>
         
